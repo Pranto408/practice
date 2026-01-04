@@ -2,57 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Website</title>
 
-    <!-- Internal CSS -->
     <style>
+        /* Global styles */
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            line-height: 1.6;
         }
 
-        header {
+        header, footer {
             background-color: #2c3e50;
-            color: white;
-            padding: 20px;
+            color: #ffffff;
             text-align: center;
+            padding: 20px;
         }
 
         nav {
             background-color: #34495e;
-            padding: 10px;
+            padding: 12px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
             text-align: center;
         }
 
-        nav a {
-            color: white;
+        nav ul li {
+            display: inline-block;
             margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
             text-decoration: none;
             font-weight: bold;
         }
 
-        nav a:hover {
+        nav ul li a:hover {
             text-decoration: underline;
         }
 
         .container {
+            max-width: 1100px;
+            margin: auto;
             padding: 20px;
         }
 
         .card {
-            background-color: white;
+            background-color: #ffffff;
             padding: 20px;
             margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 10px;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -64,23 +79,25 @@
     </header>
 
     <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </nav>
 
-    <div class="container">
-        <div class="card">
+    <main class="container">
+        <section class="card">
             <h2>Welcome</h2>
             <p>This is a simple website layout using internal CSS.</p>
-        </div>
+        </section>
 
-        <div class="card">
+        <section class="card">
             <h2>About Us</h2>
             <p>We create clean and simple web designs.</p>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <footer>
         <p>© 2026 My Website</p>
